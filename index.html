@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt("Digite um número:")
+        let num2 = prompt("Digite outro número:")
+
+        const isValidInput = (input) => !isNaN(input) && input !== '';
+
+        if (!isValidInput(num1) || !isValidInput(num2)) {
+            alert("Entrada inválida. Por favor, insira números válidos.");
+        } else {
+            let n1 = Number(num1);
+            let n2 = Number(num2);
+
+            const sum = (n1, n2) => {
+                return n1 + n2;
+            }
+
+            const sub = (n1, n2) => {
+                return n1 - n2
+            }
+
+            const mul = (n1, n2) => {
+                return n1 * n2
+            }
+
+            const div = (n1, n2) => {
+                return n1 / n2
+            }
+
+            const res = (n1, n2) => {
+                return n1 % n2
+            }
+
+            const parImpar = (sum) => {
+                return sum%2 == 0 ? "par" : "Ímpar"
+            }
+
+            const compara = (n1, n2) => {
+                return n1 === n2 ? "iguais" : "diferentes"
+            }
+
+            alert(`A soma de ${num1} + ${num2} é: ${sum(n1, n2)}`)
+            alert(`A subtração de ${num1} - ${num2} é: ${sub(n1, n2)}`)
+            alert(`A multiplicação de ${num1} x ${num2} é: ${mul(n1, n2)}`)
+            alert(`A divisão de ${num1} / ${num2} é: ${div(n1, n2)}`)
+            alert(`O resto de ${num1} e ${num2} é: ${res(n1, n2)}`)
+            alert(`E a soma de ${num1} + ${num2} é: ${parImpar(sum(n1, n2))}`)
+            alert(`E os números ${num1} e ${num2} são: ${compara(n1, n2)}`)
+        }
+
+        
+    </script>
+</body>
+</html>
